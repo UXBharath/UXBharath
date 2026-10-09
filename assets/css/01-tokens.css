@@ -1,0 +1,6 @@
+/* 01-tokens.css: Colour tokens and the dark theme (light values, prefers-color-scheme, [data-theme="dark"]).
+   Load order matters: later files intentionally override earlier ones. See docs/Bharath-Portfolio-Design-System.md section 11.5. */
+
+:root{--bg:#FAF5EA;--ink:#14204A;--coral:#F0524F;--red:#E0403C;--yellow:#F6C550;--lav:#E4D8EA;--teal:#256F6A;--card:#FFFDF7;--muted:#4a5378;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0E1633;--ink:#F6EFE0;--card:#17214A;--lav:#2A2F5C;--muted:#B9BFDB}}
+:root[data-theme="dark"]{--bg:#0E1633;--ink:#F6EFE0;--card:#17214A;--lav:#2A2F5C;--muted:#B9BFDB}

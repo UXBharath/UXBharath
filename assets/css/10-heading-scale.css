@@ -1,0 +1,5 @@
+/* 10-heading-scale.css: Heading scale on web (above 820px).
+   Load order matters: later files intentionally override earlier ones. See docs/Bharath-Portfolio-Design-System.md section 11.5. */
+
+/* ===== Heading scale on web (above 820px): 60% of the former size. Tablet and mobile keep their sizes (design system 3.3) ===== */
+@media(min-width:821px){h2{font-size:clamp(21.6px,3.6vw,38.4px)}.proj header h3{font-size:20px}.proj .n{font-size:34px}}

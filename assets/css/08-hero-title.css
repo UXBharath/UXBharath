@@ -1,0 +1,8 @@
+/* 08-hero-title.css: Hero name on one line (sized to its column).
+   Load order matters: later files intentionally override earlier ones. See docs/Bharath-Portfolio-Design-System.md section 11.5. */
+
+/* ===== Hero name on ONE line: size follows the column width (var(--font-display) 800 caps: "Hi, I'm Bharath" = 7.3em) ===== */
+.hero h1{font-size:clamp(34px,6.2vw,84px);letter-spacing:-.02em}
+.hero h1>span{display:inline-block}
+@media(max-width:820px){.hero h1{font-size:11vw}}
+@supports (width:1cqw){.hero-copy{container-type:inline-size}.hero h1{font-size:min(128px,calc(100cqw/7.5))}}

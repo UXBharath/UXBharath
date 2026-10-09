@@ -1,0 +1,49 @@
+/* 03-components.css: Hero, photo frame, ticker, section headings, boxes, skills, project cards, steps, contact pills.
+   Load order matters: later files intentionally override earlier ones. See docs/Bharath-Portfolio-Design-System.md section 11.5. */
+
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;min-height:82vh;position:relative}
+.hero h1{font-weight:800;font-size:clamp(52px,9vw,128px);letter-spacing:-2px}.hero h1 span{display:block}.hero h1 .c{color:var(--coral)}
+.sub{color:var(--coral);font-weight:700;text-transform:uppercase;font-size:clamp(14px,2vw,20px);margin:18px 0 8px}
+.bar{width:56px;height:4px;background:var(--coral);border-radius:2px;margin:14px 0}
+.hero p.lead{max-width:520px;font-weight:500;font-size:17px;color:var(--muted)}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:700;text-decoration:none;transition:transform .25s,box-shadow .25s}
+.btn.y{background:var(--yellow);color:#14204A}.btn.o{border:2px solid var(--ink)}
+.btn:hover{transform:translateY(-1px) rotate(-.25deg);box-shadow:0 2.5px 0 -.5px var(--coral)}
+.photo{position:relative;aspect-ratio:4/5;max-width:440px;width:100%;justify-self:center}
+.photo .blk{position:absolute;transition:transform .25s ease-out}
+.frame{position:absolute;inset:8% 6% 6% 10%;background:var(--lav);border-radius:14px;overflow:hidden;border:6px solid var(--ink);display:grid;place-items:center;cursor:pointer;z-index:2}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:none;transition:transform .6s}.frame:hover img{transform:scale(1.06)}.frame.has img{display:block}.frame.has .ph{display:none}
+.ph{text-align:center;font-weight:600;font-size:12px;color:var(--ink)}.ph big{display:block;font:800 120px/1 var(--font-display);color:var(--coral)}
+.hint{position:absolute;bottom:0;right:0;background:var(--yellow);color:#14204A;font-size:11px;font-weight:700;padding:6px 10px;border-radius:8px 0 0 0;opacity:.95}
+.ticker{overflow:hidden;background:var(--ink);color:var(--bg);padding:14px 0;white-space:nowrap}
+.ticker div{display:inline-block;animation:mq 26s linear infinite;font:800 22px var(--font-display);text-transform:uppercase}.ticker i{color:var(--yellow);font-style:normal;margin:0 22px}
+@keyframes mq{to{transform:translateX(-50%)}}
+h2{font-weight:800;font-size:clamp(36px,6vw,64px);letter-spacing:-1px;margin-bottom:10px}h2 em{color:var(--coral);font-style:normal}
+.eye{display:inline-block;background:var(--yellow);color:#14204A;font-weight:700;font-size:12px;padding:4px 12px;border-radius:20px;text-transform:uppercase;margin-bottom:12px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.box{background:var(--lav);border-radius:16px;padding:24px;border-left:6px solid var(--coral)}.box h3{color:var(--coral);font-size:20px;margin-bottom:8px}.box p{margin:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.skill{background:var(--card);border-radius:16px;padding:20px;border:2px solid var(--ink);transition:transform .3s}.skill:hover{transform:translateY(-6px) rotate(-1deg)}.skill b{font:800 20px var(--font-display);text-transform:uppercase;color:var(--coral)}
+.proj{background:var(--card);border:3px solid var(--ink);border-radius:20px;margin-top:22px;overflow:hidden;transition:transform .2s ease-out}
+.proj header{display:flex;gap:20px;align-items:center;padding:24px;cursor:pointer}
+.proj .n{font:800 56px var(--font-display);color:var(--coral);min-width:64px}
+.proj header h3{font-size:clamp(22px,3.4vw,34px)}.proj .tag{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase}
+.proj .pl{margin-left:auto;width:42px;height:42px;border-radius:50%;background:var(--yellow);color:#14204A;display:grid;place-items:center;font-size:24px;font-weight:700;transition:transform .35s;flex:none}
+.proj.open .pl{transform:rotate(45deg);background:var(--coral);color:#fff}
+.det{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s}.proj.open .det{grid-template-rows:1fr}.det>div{overflow:hidden}
+.in{padding:0 24px 26px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.in .box{border-left-width:5px}.in ul{margin:6px 0 0;padding-left:18px}.in li{margin:3px 0}
+.in .wide{grid-column:1/-1;background:var(--yellow);color:#14204A;border-color:var(--ink)}.in .wide h3{color:#14204A}
+.quote{background:var(--yellow);color:#14204A;border-radius:20px;padding:34px;font:800 clamp(24px,4vw,40px)/1.15 var(--font-display);text-transform:uppercase}
+.collab{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.steps{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}.steps span{background:var(--ink);color:var(--bg);padding:6px 14px;border-radius:20px;font-weight:600;font-size:13px}
+.contact{text-align:center}
+.cta-icons{display:flex;gap:16px;justify-content:center;margin-top:24px;flex-wrap:wrap}
+.icon-cta{display:flex;align-items:center;gap:10px;background:var(--card);border:2px solid var(--ink);border-radius:50px;padding:12px 22px;text-decoration:none;color:var(--ink);font-weight:700;transition:transform .25s,background .25s,color .25s}
+.icon-cta svg{width:22px;height:22px;flex:none}
+.icon-cta:hover{background:var(--yellow);color:#14204A;transform:translateY(-4px) scale(1.04)}
+.hero-contact{display:flex;gap:20px;flex-wrap:wrap;margin:18px 0 4px}
+.hero-contact a{display:flex;align-items:center;gap:8px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px;border-bottom:2px solid transparent;transition:border-color .25s,color .25s}
+.hero-contact a:hover{color:var(--coral);border-color:var(--coral)}
+.hero-contact svg{width:18px;height:18px;flex:none;color:var(--coral)}

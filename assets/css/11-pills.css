@@ -1,0 +1,8 @@
+/* 11-pills.css: Pills: yellow hover fill.
+   Load order matters: later files intentionally override earlier ones. See docs/Bharath-Portfolio-Design-System.md section 11.5. */
+
+/* ===== Pills: the hover fill is yellow with ink text (design system 2.2 and 8.3) ===== */
+.tg,.mo{transition:background .25s,color .25s}
+.tg:hover,.mo:hover{background:var(--yellow);color:#14204A}
+.shot-cta{transition:opacity .3s,transform .3s,background .25s}
+.shot-cta:hover{background:var(--yellow)}

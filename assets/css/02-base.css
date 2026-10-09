@@ -1,0 +1,13 @@
+/* 02-base.css: Reset, html/body, headings, links, navigation, main and section.
+   Load order matters: later files intentionally override earlier ones. See docs/Bharath-Portfolio-Design-System.md section 11.5. */
+
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:var(--font-display);font-weight:800;text-transform:uppercase;margin:0;line-height:1}
+a{color:inherit}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px)}
+.logo{font-family:var(--font-display);font-weight:800;font-size:22px;text-decoration:none}.logo b{color:var(--coral);font-weight:inherit}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-weight:600;font-size:14px}
+nav a.l{text-decoration:none;position:relative}nav a.l::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;background:var(--coral);transition:width .3s}nav a.l:hover::after{width:100%}
+.tg{border:2px solid var(--ink);background:none;color:var(--ink);border-radius:20px;padding:4px 12px;font:600 12px var(--font-body);cursor:pointer}
+main{display:flex;flex-direction:column}section{padding:80px 5vw;max-width:1200px;margin:0 auto;width:100%}
