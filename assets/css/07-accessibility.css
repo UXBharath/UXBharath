@@ -11,14 +11,14 @@
 .skip:focus{top:calc(env(safe-area-inset-top,0px) + 12px)}
 :where(a,button,input,select,textarea,summary,[tabindex]):focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 [tabindex="-1"]:focus{outline:none}
-.frame:focus-within{outline:3px solid var(--ink);outline-offset:3px}
+
 :where(a,button,input){scroll-margin-top:calc(env(safe-area-inset-top,0px) + 84px)}
 /* text contrast (large text needs 3:1, small text 4.5:1) */
 .sub{font-size:clamp(19px,2vw,20px)}
 
 
 .box h3{color:var(--box-title)}
-.ph big{color:var(--ink)}
+
 .hero-contact a:hover{color:var(--ink)}
 .split .ch:hover{color:var(--coral)}
 /* text on coral or yellow is always ink #14204A (4.51:1 on coral, 9.75:1 on yellow) */

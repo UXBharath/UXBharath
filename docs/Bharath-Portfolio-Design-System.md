@@ -1,7 +1,7 @@
 # Bharath Portfolio — Design System
 
-**Version 1.7 · Lead UX & Product Designer portfolio · WCAG 2.2 AA**
-Extracted from the live HTML/CSS. Every value below is what the page uses today. v1.1 brings the page to WCAG 2.2 AA **without changing the colour palette**: only colour pairings, a few sizes, states and semantics were adjusted (see §2.4 and §10). v1.2 adds the case-study evidence components and the Experience timeline (§7.17 to §7.22) and the rules for hidden content (§8.5). v1.3 sets one heading hierarchy (§3.2, §3.3): on web, section and project headings are 60% of their former size; tablet and mobile are unchanged. v1.4 makes the hover fill of every pill yellow (§2.2, §8.3). v1.5 sets the footer apart from the page with the inverted strip (§7.16). v1.6 documents the project folder structure (§11.5): the site is now split into HTML, CSS, JavaScript and image files. v1.7 slims each project card to its essentials (Option B, §8.1) and requires the text to be copied word for word from the linked case study (§8.4). Items marked **⚠ Recommendation** are optional suggestions, not current behaviour.
+**Version 1.8 · Lead UX & Product Designer portfolio · WCAG 2.2 AA**
+Extracted from the live HTML/CSS. Every value below is what the page uses today. v1.1 brings the page to WCAG 2.2 AA **without changing the colour palette**: only colour pairings, a few sizes, states and semantics were adjusted (see §2.4 and §10). v1.2 adds the case-study evidence components and the Experience timeline (§7.17 to §7.22) and the rules for hidden content (§8.5). v1.3 sets one heading hierarchy (§3.2, §3.3): on web, section and project headings are 60% of their former size; tablet and mobile are unchanged. v1.4 makes the hover fill of every pill yellow (§2.2, §8.3). v1.5 sets the footer apart from the page with the inverted strip (§7.16). v1.6 documents the project folder structure (§11.5): the site is now split into HTML, CSS, JavaScript and image files. v1.7 slims each project card to its essentials (Option B, §8.1) and requires the text to be copied word for word from the linked case study (§8.4). v1.8 makes the hero portrait a plain, static photo: the upload control, its placeholder and its script are removed (§7.15). Items marked **⚠ Recommendation** are optional suggestions, not current behaviour.
 
 ---
 
@@ -151,7 +151,6 @@ Every component takes its family from one of two tokens, never from a stack type
 | Quote / callout | Kanit | `clamp(24px, 4vw, 40px)` / 1.15 | 800 | Uppercase |
 | Project title (h3, card header) | Kanit | **Web:** 20px. **Tablet and mobile:** `clamp(22px, 3.4vw, 34px)` | 800 | Applies to the header only; titles inside a case study are card titles |
 | Project number | Kanit | **Web:** 34px (the stat-number size). **Tablet and mobile:** 38px | 800 | Coral |
-| Hero photo placeholder | Kanit | 120px (70px mobile) | 800 | Coral |
 | Mobile menu link | Kanit | `clamp(34px, 10.5vw, 46px)` / 1.1 | 800 | Uppercase, tracking `-.5px` |
 | Stat number | Kanit | 34px (26px mobile) | 800 | Coral |
 | Ticker | Kanit | 22px | 800 | Uppercase |
@@ -170,7 +169,6 @@ Every component takes its family from one of two tokens, never from a stack type
 | Step chip | Poppins | 13px | 600 | |
 | Footer | Poppins | 13px | 400 | `--muted` |
 | Eyebrow, tag, stat label, button label (small) | Poppins | 12px | 600–700 | Uppercase for eyebrow, tag, stat label |
-| Hint badge | Poppins | 11px | 700 | |
 
 Headings use `overflow-wrap: anywhere`, so long words wrap instead of overflowing at 320px or under user text-spacing overrides.
 
@@ -217,7 +215,7 @@ There is no formal spacing scale in the CSS. These are the values it uses, group
 |---|---|---|
 | `radius-xs` | 2–3px | Accent bars, underlines |
 | `radius-sm` | 6px | Hero decorative blocks |
-| `radius-md` | 8px | Thumbnails, hint badge |
+| `radius-md` | 8px | Thumbnails |
 | `radius-lg` | 12px | Buttons |
 | `radius-xl` | 14px | Photo frame, screenshots |
 | `radius-2xl` | 16px | Info boxes, skill cards |
@@ -440,7 +438,7 @@ Full-bleed ink strip, `padding: 14px 0`, Kanit 22px uppercase in `--bg`; yellow 
 
 ### 7.15 Hero photo frame
 
-4:5 aspect, max-width 440px. Lavender fill, 6px ink border, radius 14px. Image zooms to 1.06 on hover and the frame gains a `12px 12px 0 coral` shadow. Four floating decorative blocks (red, ink, yellow circle, teal) orbit it. Click to upload a photo (in-memory only).
+4:5 aspect, max-width 440px. Lavender fill, 6px ink border, radius 14px. Image zooms to 1.06 on hover and the frame gains a `12px 12px 0 coral` shadow. Four floating decorative blocks (red, ink, yellow circle, teal) orbit it. The portrait is a **static photo**: a plain `<div>` with an `<img>` that has descriptive `alt` text. It is not a control, so there is no upload, no placeholder and no pointer cursor; visitors never add or change the picture. To change the portrait, replace `assets/img/bharath-portrait.jpg`.
 
 ### 7.16 Footer
 
@@ -609,7 +607,7 @@ Also: `@media (hover: none)` hides the cursor glow on any touch device, regardle
 |---|---|
 | 1.4.3 Contrast (Minimum) | Coral text restricted to large sizes; box titles use ink in light theme; text on coral is ink; role subtitle raised to 19px and card titles set to 20px so they count as large text; hover colours corrected |
 | 1.4.11 Non-text contrast | Focus ring is 3px solid ink (≥14:1 on every surface); coral icons are ≥3.2:1 |
-| 2.1.1 Keyboard | Accordion header is now operable through a real `<button>`; photo input is focusable instead of `hidden` |
+| 2.1.1 Keyboard | Accordion header is now operable through a real `<button>` |
 | 2.4.1 Bypass blocks | "Skip to main content" link; `<main>` is a focus target |
 | 2.4.3 / 2.4.7 / 2.4.11 Focus | Visible focus style; collapsed panels excluded from tab order; `scroll-margin-top` keeps focused controls clear of the sticky nav; menu content behind the overlay is `inert` |
 | 4.1.2 Name, Role, Value | `aria-expanded` and `aria-controls` on the menu and accordions; `aria-pressed` on the theme toggle; navigation landmarks labelled |
@@ -787,7 +785,7 @@ UX-Bharath/
 | File | Contents |
 |---|---|
 | `core.js` | Helpers and the scroll-reveal observer |
-| `interactions.js` | Project accordion, hero parallax, card tilt, photo upload, theme toggle |
+| `interactions.js` | Project accordion, hero parallax, card tilt, theme toggle |
 | `effects.js` | Hero letters, count-up, scroll progress, cursor glow, magnetic buttons, photo tilt, stagger |
 | `navigation.js` | In-page link focus helper and the mobile menu |
 | `accessibility.js` | Theme state for assistive tech, pause/play control |
