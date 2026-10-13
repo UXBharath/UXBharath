@@ -1,7 +1,7 @@
 # Bharath Portfolio — Design System
 
-**Version 1.8 · Lead UX & Product Designer portfolio · WCAG 2.2 AA**
-Extracted from the live HTML/CSS. Every value below is what the page uses today. v1.1 brings the page to WCAG 2.2 AA **without changing the colour palette**: only colour pairings, a few sizes, states and semantics were adjusted (see §2.4 and §10). v1.2 adds the case-study evidence components and the Experience timeline (§7.17 to §7.22) and the rules for hidden content (§8.5). v1.3 sets one heading hierarchy (§3.2, §3.3): on web, section and project headings are 60% of their former size; tablet and mobile are unchanged. v1.4 makes the hover fill of every pill yellow (§2.2, §8.3). v1.5 sets the footer apart from the page with the inverted strip (§7.16). v1.6 documents the project folder structure (§11.5): the site is now split into HTML, CSS, JavaScript and image files. v1.7 slims each project card to its essentials (Option B, §8.1) and requires the text to be copied word for word from the linked case study (§8.4). v1.8 makes the hero portrait a plain, static photo: the upload control, its placeholder and its script are removed (§7.15). Items marked **⚠ Recommendation** are optional suggestions, not current behaviour.
+**Version 1.10 · Lead UX & Product Designer portfolio · WCAG 2.2 AA**
+Extracted from the live HTML/CSS. Every value below is what the page uses today. v1.1 brings the page to WCAG 2.2 AA **without changing the colour palette**: only colour pairings, a few sizes, states and semantics were adjusted (see §2.4 and §10). v1.2 adds the case-study evidence components and the Experience timeline (§7.17 to §7.22) and the rules for hidden content (§8.5). v1.3 sets one heading hierarchy (§3.2, §3.3): on web, section and project headings are 60% of their former size; tablet and mobile are unchanged. v1.4 makes the hover fill of every pill yellow (§2.2, §8.3). v1.5 sets the footer apart from the page with the inverted strip (§7.16). v1.6 documents the project folder structure (§11.5): the site is now split into HTML, CSS, JavaScript and image files. v1.7 slims each project card to its essentials (Option B, §8.1) and requires the text to be copied word for word from the linked case study (§8.4). v1.8 makes the hero portrait a plain, static photo: the upload control, its placeholder and its script are removed (§7.15). v1.10 points the MBCS card at the final case-study prototype, so both case-study links are Figma prototype links again (§8.1). Items marked **⚠ Recommendation** are optional suggestions, not current behaviour.
 
 ---
 
@@ -525,7 +525,7 @@ Every project card follows the same short order, so recruiters can scan it in se
 4. **Key decision**: one decision, as a card (§7.19)
 5. **Targets or results**: metric tiles with the case study's note (§7.20)
 6. **Outcome & learning**: yellow callout, taken from the case study's reflection or closing
-7. **CTA**: "View full case study ↗" opens the Figma prototype in a new tab (`target="_blank" rel="noopener"`)
+7. **CTA**: "View full case study ↗" opens the case study in Figma in a new tab (`target="_blank" rel="noopener"`). The image link and the button always point to the same URL. Both case studies link to a Figma **prototype**. A Figma link only works for visitors if the file's sharing is set to "anyone with the link can view"
 
 ### 8.2 Content tone
 
@@ -626,7 +626,7 @@ Also: `@media (hover: none)` hides the cursor glow on any touch device, regardle
 ### 10.4 Limits of this verification
 - Automated tools find roughly a third of accessibility issues. This page passes every automated and scripted test above, but **a conformance claim also needs manual testing**: VoiceOver (iOS/macOS), NVDA or JAWS, TalkBack, and keyboard-only use on real devices.
 - Google Fonts could not load in the test environment, so fallback fonts were measured. Colours and contrast are unaffected; text widths may differ slightly.
-- The linked Figma prototypes are third-party pages and outside this document's scope.
+- The linked Figma case studies are third-party pages and outside this document's scope.
 - The scripted tests use Chrome only. Check Safari for the `inert` attribute (Safari 15.5+) and `:focus-visible`.
 
 ### 10.5 Rules for new components
